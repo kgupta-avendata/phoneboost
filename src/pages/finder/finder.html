@@ -1,0 +1,75 @@
+<ion-header no-border>
+	<ion-navbar transparent>
+		<ion-buttons right>
+			<button ion-button right icon-only (click)="shareApp()">
+				<ion-icon name="share" ios="ios-share-outline"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div id="map" #map></div>
+	<div id="mapDetails" *ngIf="markerClicked">
+		<ul>
+			<li>
+				<span class="name" float-left>{{data.name}}</span>
+				<span class="close" (click)="closeMarker()" float-right> <a>Close</a>  </span>
+			</li>
+			<li>
+				<span class="address" float-left col-6 text-left>{{data.address}}</span>
+				<span class="routePlanner" (click)="goToRoute()" float-right col-4 text-right>Routenplaner</span>
+			</li>
+			<li class="withBorder" margin-top padding-top>
+				<span class="name">öffnungszeiten</span>
+				<div>
+					<table>
+						<tbody>
+							<tr *ngFor="let time of data.openingTime">
+								<td>{{time}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="overlay" [hidden]="addOverlay"></div>
+</ion-content>
+
+<ion-footer no-border>
+	<ion-row [hidden]="searchClicked">	
+		<div class="searchResult" [hidden]="addOverlay">
+			<ion-list>
+				<h2>suchergebnisse</h2>
+				<ion-item *ngFor="let item of items">
+					<ul>
+						<li col-10 float-left text-left>
+							<span (click)="showLocationByName(item.name)">{{ item.name }}</span>
+							<span>{{ item.address }}</span>
+						</li>
+						<li col-2 float-right text-right padding-top>{{ getDistanceByName(item.name) }}</li>
+					</ul>
+				</ion-item>
+			</ion-list>
+		</div>
+
+		<ul>
+			<li col-9 float-left>
+				<ion-searchbar placeholder="Search for Places" (ionInput)="filterPositions($event)"></ion-searchbar>
+			</li>
+			<li col-3 float-right class="closeSearchBtn">
+				<button ion-button block clear  (click)="closeSearch()" >schliessen</button>
+			</li>
+		</ul>
+		
+	</ion-row>
+	<ion-toolbar transparent>
+		<ion-buttons>
+			<button ion-button block outline float-left class="searchBtn" (click)="searchClick()">Suchen</button>
+			<div class="centerNavigate" (click)="showMyLocation()" float-right></div>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-footer>
+

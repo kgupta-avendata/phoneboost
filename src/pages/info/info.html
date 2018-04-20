@@ -1,0 +1,31 @@
+<ion-header no-border>
+	<ion-navbar transparent>
+		<ion-buttons right>
+			<button ion-button right icon-only (click)="shareApp()">
+				<ion-icon name="share" ios="ios-share-outline"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid padding>
+		<ion-row>
+			<h1>IMPRESSUM</h1>
+			<p>Lorem ipsum dolor sit amet, conseteur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et ac-cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et ac-cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+			<h2 margin-top padding-top>DATENSCHUTZERKLÄRUNG</h2>
+			<p>Lorem ipsum dolor sit amet, conseteur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et ac-cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et ac-cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		
+			<ion-item padding-top margin-bottom>
+				<ion-label>Akku Warnung</ion-label>
+				<ion-toggle pulsado [checked]="isBattryWaring" (ionChange)="batteryWaring()"></ion-toggle>
+			</ion-item >
+			
+			<!-- <ion-item >
+				<ion-label>Analysetechnologie verwenden</ion-label>
+				<ion-toggle pulsado [checked]="isAnalysisTech" (ionChange)="analysisTechnology()"></ion-toggle>
+			</ion-item > -->
+		</ion-row>
+	</ion-grid>
+</ion-content>

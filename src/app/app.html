@@ -1,0 +1,11 @@
+<div *ngIf="showSplash" class="splash">
+    <div class="spinner">
+        <img src="./assets/imgs/logo.png" alt="">
+
+        <div class="webLink">
+            <span>www.phoneboost.de</span>
+        </div>
+    </div>
+</div>
+  
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

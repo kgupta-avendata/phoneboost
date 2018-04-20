@@ -1,0 +1,14 @@
+page-about {
+    .content{
+        @include defaultFont();
+    
+        .swiper-slide{
+            .slide-zoom{
+                text-align: left;
+            }
+        }
+        
+        .swiper-container{padding-bottom: 15px;}
+        .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 0px;}
+    }
+}

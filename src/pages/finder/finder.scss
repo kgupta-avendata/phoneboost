@@ -1,0 +1,230 @@
+// ion-app .nav-decor {
+//    background-color: transparent !important;
+// }
+page-finder {
+    .content{
+        @include defaultFont();
+        
+        #map {
+            height: 100%;
+        }
+        
+        #mapDetails {
+            height: 40%;
+            z-index: 99999;
+            position: fixed;
+            bottom: 50px;
+            width: 100%;
+            background: #fff;
+            padding: 16px;
+
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    display: block;
+                    clear: both;
+                    overflow: hidden;
+                    font-size: $size_1_4;
+
+                    .name{
+                        color: color($colors, primary);
+                        font-size: $size_1_5;
+                        margin: 0;
+                        font-family: $font-family-bold;
+                    }
+            
+                    .close{
+                        display: block;
+                        background: url("../assets/icon/close.png") no-repeat top right / 50%;
+                        
+
+                        a{
+                            display: block;
+                            width: 32px;
+                            height: 32px;
+                            text-indent: -9999px;
+                        }
+                    }
+
+                    .address{
+                        padding-left: 0;
+                    }
+                    .routePlanner{
+                        padding-right: 0;
+                    }
+
+                    &.withBorder{
+                        border-top: 1px solid color($colors, secondary);
+
+                        table{
+                            margin-top: 16px;
+                            width: 50%;
+
+                            td{
+                                text-align: center;
+                                vertical-align: middle;
+
+                                &:first-child{
+                                    text-align: left;
+                                }
+                            }                           
+                        }
+                    }                    
+
+                }                
+
+            }    
+
+        }
+
+        
+    }
+
+    ion-footer{
+        background-color: #fff;
+
+        .clear{clear: both};
+
+        .row{
+            background-color: #fff;
+
+            div{
+                // width: 100%;
+                overflow: hidden;
+
+                &.searchResult{
+                    width: 100%;
+                    background-color: color($colors, lightBlue);
+                   
+                    .list {
+                        margin-bottom: 0;
+                        
+
+                        .item{
+                            background-color: color($colors, lightBlue);
+                            color: color($colors, secondary);
+                            padding-left: 0;
+                            
+                            .item-inner{
+                                padding-left: 1.5rem;
+                                border-bottom-color: color($colors, secondary);
+
+                                .label {
+                                    margin: 8px;
+
+                                    ul li span{
+                                        display: block;
+    
+                                        &:first-child{
+                                            padding-bottom: 3px;
+                                        }
+                                    }
+                                }
+
+                                
+                            }
+
+                            &:last-child{
+                                padding-bottom: 5px;
+                                -webkit-box-shadow: inset 0px -15px 15px -10px color($colors, secondary);
+                                box-shadow: inset 0px -15px 15px -10px color($colors, secondary);
+                            }
+                        }
+                    }
+                    h2{
+                        color: color($colors, primary);
+                        text-transform: uppercase;
+                        margin: 0;
+                        padding: 2rem 4rem 2rem 3rem;
+                        font-size: $size_1_5;
+                        border-bottom: 1px solid color($colors, secondary);
+                    }
+                }
+            }
+
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    display: block;
+                    // clear: both;
+                    overflow: hidden;
+                    // color: color($colors, irisBlue);
+                    font-size: $size_1_2;
+
+                    &.closeSearchBtn{
+                        margin-top: 10px;
+                        
+                        span{
+                            text-transform: lowercase;
+                        }
+                    }
+
+                    
+                }
+
+                
+            }
+
+            .searchbar-search-icon{
+                display: none
+            }
+
+            .searchbar-input{
+                padding-left: 6px;
+                box-shadow: none;
+                border: 2px solid color($colors, secondary);
+                border-radius: 5px;
+                color: color($colors, secondary);
+                font-size: $size_1_4;
+            }
+
+            // .closeSearchBtn{
+            //     text-transform: lowercase
+            // }
+        }
+
+        .toolbar{
+            padding: 14px 1px 14px 11px;
+
+            ion-buttons {
+                .bar-button{
+                    border: 2px solid color($colors, irisBlue);
+                    border-radius: 5px;
+                    color: color($colors, irisBlue);
+                    font-size: $size_1_4;
+                    text-transform: capitalize;
+                    min-width: 30%;
+                    height: 45px;
+                    background-color: #fff;
+    
+                    &:active{
+                        background-color: color($colors, irisBlue);
+                        color: #fff;
+                    }
+                }
+            }
+        }      
+
+        .centerNavigate{
+            width: 46px;
+            height: 45px;
+            background: url("../assets/imgs/navigator.png") no-repeat center / 65%;
+        }
+    }
+
+    .overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 20;
+        top: 0;
+        left: 0;
+    }
+}

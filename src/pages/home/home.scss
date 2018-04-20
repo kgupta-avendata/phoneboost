@@ -1,0 +1,106 @@
+page-home {
+    .homeScreen{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        // left: 0;
+        // top: 0;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        
+        text-align: center;
+    }
+
+    .logo{
+        img{
+            width: 100px;
+            margin-top: 0rem;
+        }         
+    }
+    
+    .col{margin: 0 auto;}
+
+    
+
+    .pageLinks{
+        min-height: 10rem;
+        height: 100%;
+        color: #1e6db1;
+        border: 3px solid #1e6db1;
+        
+        // margin-bottom: 0.5rem;
+        
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        
+        text-align: center;
+        border-radius: $button-md-border-radius;
+
+        .button-inner{
+            width: auto;
+            // margin: 0 auto;
+        }
+
+        
+        
+        img{
+            width: 40px;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        
+        span{
+            display: block;
+            font-family: $font-family-bold;
+        }
+    }
+    
+    
+    .bar-button-default-md,
+    .bar-button-default-ios{
+        color: #5b6874;
+    }
+
+    ion-footer{
+        ion-buttons{
+            margin: 0;
+            .bar-button{
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footer-md::before{
+        background: none;
+    }
+}

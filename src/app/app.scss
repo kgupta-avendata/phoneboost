@@ -1,0 +1,133 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@mixin defaultFont() {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: color($colors, secondary);
+}
+@mixin sameHeadingProps(){
+    color: color($colors, primary);
+    font-size: $size_2_0;
+    margin: 0;
+    font-family: $font-family-bold;
+}
+
+
+body{
+    @include defaultFont();
+}
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    text-align: center;
+    
+    background-color: #1e6db1;
+    background-image: radial-gradient(
+                        circle closest-side,
+                        #5687af,
+                        #1e6db1
+                    );
+
+    
+    .spinner {
+        width: 100%;
+        position: relative;
+        margin: 100px auto;
+        flex: 1 100%;
+    
+        img{
+            width: 100px;
+           
+
+            -webkit-animation: logoFading 2.0s infinite ease-in-out;
+            animation: logoFading 2.0s infinite ease-in-out;
+        }
+
+        .webLink{
+            width: 100%;
+            font-size: 28px;
+            color: #fff;
+            font-family: $font-family-base;
+            position: fixed;
+            bottom: 10%;
+        }
+    }
+
+    @-webkit-keyframes logoFading {
+        0%, 100%  {opacity:0.4}
+        20%, 80%  {opacity:0.7}
+        40%, 60%  {opacity:0.9} 
+    }
+    
+    @keyframes logoFading {
+        0%, 100%  {opacity:0.4}
+        20%, 80%  {opacity:0.7}
+        40%, 60%  {opacity:0.9} 
+    }
+}
+
+.bar-button,
+.bar-buttons{
+    color: color($colors, secondary);
+}
+
+h1{
+    @include sameHeadingProps();
+}
+
+p{font-size: $size_1_5;}
+
+.back-button{margin-left: 0;}
+.back-button.bar-button-default-md{padding-left: 0;}
+
+
+.toggle-ios{
+    .toggle-icon {
+        background-color: color($colors, secondary);
+        &::before{
+            background-color: color($colors, secondary);
+        }
+    }
+}
+.toggle-ios.toggle-checked{
+    
+    .toggle-icon {
+        background-color: color($colors, irisBlue);
+
+        
+    }
+} 

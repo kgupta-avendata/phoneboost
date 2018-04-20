@@ -1,0 +1,22 @@
+<ion-content>
+	<ion-grid>
+		<ion-row align-items-center>
+		<div class="homeScreen" padding>
+			<ion-col col-12 col-sm-7 col-md-7 class="logo"><img src="assets/imgs/logoScreen.png" alt="Phone Boost" /></ion-col>
+			<ion-col col-12 col-sm-7 col-md-7><button ion-button block outline class="pageLinks" (click)="goToAbout()"> <img src="assets/imgs/pageLinksIcons.png"/> <span class="linkTitle"> WAS IST PHONEBOOST?</span></button></ion-col>
+			<ion-col col-12 col-sm-7 col-md-7><button ion-button block outline class="pageLinks" (click)="goToFinder()"> <img src="assets/imgs/pageLinksIcons.png"/> <span class="linkTitle"> PHONEBOOST FINDER</span></button></ion-col>
+			<ion-col col-12 col-sm-7 col-md-7><button ion-button block outline class="pageLinks" (click)="goToLink()"> <img src="assets/imgs/pageLinksIcons.png"/> <span class="linkTitle"> BESTELLEN</span></button></ion-col>
+		</div>        
+		</ion-row>
+	</ion-grid>
+</ion-content>
+
+<ion-footer padding-horizontal>
+	<ion-toolbar transparent>
+		<ion-buttons end>
+		<button ion-button icon-only circle class="btnFooter" (click)="goToInfo()">
+			<ion-icon name="information-circle" ios="ios-information-circle-outline"></ion-icon>
+		</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-footer>

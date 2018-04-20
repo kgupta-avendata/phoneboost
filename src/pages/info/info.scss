@@ -1,0 +1,49 @@
+page-info {
+    // .bar-button{
+    //     color: #3e3e40;
+    // }
+
+    // .back-button-md{padding-left: 0;margin-left: 0;}
+    
+    // .col{
+    //     padding-left: 0;
+    //     padding-right: 0;
+    // }
+
+    // h1{
+    //     color: #1e6db1;
+    //     font-size: 18px;
+    //     margin: 0;
+    //     font-family: $font-family-bold;
+    // }
+
+    // .slide-zoom{
+    //     text-align: left;
+    //     font-size: 1.4rem;
+    //     font-family: 'helvetica';
+    // }
+    // .swiper-container{padding-bottom: 10px;}
+    // .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 0;}
+
+    .content{
+        @include defaultFont();
+
+        h2{
+            @include sameHeadingProps();
+        }
+
+        ion-item.item{
+            padding-left: 0;
+            color: color($colors, secondary);
+        }
+
+        .item.item-block .item-inner{
+            border-bottom: 0;
+            padding-right: 0;
+
+            .toggle{
+                padding-right: 0;
+            }
+        }
+    }
+}

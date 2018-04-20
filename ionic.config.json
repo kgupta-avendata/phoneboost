@@ -1,0 +1,8 @@
+{
+  "name": "phoneBoost",
+  "app_id": "683a2ff8",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
